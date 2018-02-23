@@ -2,6 +2,7 @@
 
 
 namespace Hichxm\SessionManager;
+use SessionInterface;
 
 
 /**
@@ -10,7 +11,44 @@ namespace Hichxm\SessionManager;
  */
 class SessionManager
 {
+    private $session;
 
-    public function __construct(){}
+    /**
+     * SessionManager constructor.
+     * @param SessionInterface $session
+     */
+    public function __construct(SessionInterface $session = null){
+        $this->session = $session;
+    }
 
+    /**
+     * Get value of $key
+     * @param string $key
+     * @return string|array|int|boolean|null
+     */
+    public function get($key)
+    {
+        return $this->session->get($key);
+    }
+
+    /**
+     * Set value of $key
+     * @param string $key
+     * @param string|array|int|boolean $value
+     * @return void
+     */
+    public function set($key, $value)
+    {
+        $this->session->set($key, $value);
+    }
+
+    /**
+     * Delete value of $key
+     * @param string $key
+     * @return void
+     */
+    public function unset($key)
+    {
+        $this->session->unset($key);
+    }
 }
