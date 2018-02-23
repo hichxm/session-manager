@@ -85,4 +85,32 @@ class phpSessionTest extends \PHPUnit\Framework\TestCase {
         $this->assertEquals("test", $session->get("session_2"));
         $session->stop();
     }
+
+    /**
+     * @test
+     */
+    public function check_work_unset_function()
+    {
+        $session_method = new PHP_SESSION_MANAGER();
+
+        /*
+         * Session 1
+         */
+        $session = new SessionManager($session_method);
+        $session->start();
+        $session->set("session_1", 1234);
+        $session->unset("session_1");
+        $this->assertTrue(!isset($_SESSION['session_1']));
+        $session->stop();
+
+        /*
+         * Session 2
+         */
+        $session = new SessionManager($session_method);
+        $session->start();
+        $session->set("session_2", "test");
+        $session->unset("session_2");
+        $this->assertTrue(!isset($_SESSION['session_2']));
+        $session->stop();
+    }
 }

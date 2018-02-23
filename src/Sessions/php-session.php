@@ -77,6 +77,8 @@ class PHP_SESSION_MANAGER implements SessionInterface {
      */
     public function unset($key)
     {
-        // TODO: Implement unset() method.
+        if (!empty($this->id())) {
+            unset($_SESSION[$key]);
+        }
     }
 }
