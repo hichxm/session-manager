@@ -39,6 +39,7 @@ class PHP_SESSION_MANAGER implements SessionInterface {
     }
 
     /**
+     * Return current session id.
      * @return string
      */
     public function id()
