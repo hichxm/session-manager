@@ -1,0 +1,13 @@
+{
+    "name": "hichxm/session-manager",
+    "description": "Manage your session with different methods.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hichxm",
+            "email": "hicham.slimani.fr@gmail.com"
+        }
+    ],
+    "require": {}
+}
