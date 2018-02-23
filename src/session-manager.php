@@ -11,7 +11,7 @@ use SessionInterface;
  */
 class SessionManager
 {
-    private $session;
+    public $session;
 
     /**
      * SessionManager constructor.

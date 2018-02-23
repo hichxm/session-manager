@@ -22,7 +22,6 @@ class PHP_SESSION_MANAGER implements SessionInterface {
     public function stop()
     {
         if (!empty(session_id())) {
-            var_dump(session_id());
             session_destroy();
         }
     }
@@ -36,6 +35,14 @@ class PHP_SESSION_MANAGER implements SessionInterface {
         if (empty(session_id())) {
             session_start();
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function id()
+    {
+        return session_id();
     }
 
     /**
