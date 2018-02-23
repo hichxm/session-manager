@@ -15,10 +15,10 @@ class SessionManager
 
     /**
      * SessionManager constructor.
-     * @param SessionInterface $session
+     * @param SessionInterface $SessionInterface
      */
-    public function __construct(SessionInterface $session){
-        $this->session = $session;
+    public function __construct(SessionInterface $SessionInterface){
+        $this->session = $SessionInterface;
     }
 
     /**
