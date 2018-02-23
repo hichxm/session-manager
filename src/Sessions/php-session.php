@@ -1,6 +1,7 @@
 <?php
 
 namespace Hichxm\SessionManager\Session;
+
 use SessionInterface;
 
 /**
