@@ -16,6 +16,24 @@ class PHP_SESSION_MANAGER implements SessionInterface {
     }
 
     /**
+     * Stop current session.
+     * @return void
+     */
+    public function stop()
+    {
+        // TODO: Implement stop() method.
+    }
+
+    /**
+     * Start session.
+     * @return void
+     */
+    public function start()
+    {
+        // TODO: Implement stop() method.
+    }
+
+    /**
      * Get value of $key
      * @param string $key
      * @return string|array|int|boolean|null

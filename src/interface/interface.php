@@ -11,6 +11,18 @@ interface SessionInterface {
     public function __construct();
 
     /**
+     * Stop current session.
+     * @return void
+     */
+    public function stop();
+
+    /**
+     * Start session.
+     * @return void
+     */
+    public function start();
+
+    /**
      * Get value of $key
      * @param string $key
      * @return string|array|int|boolean|null

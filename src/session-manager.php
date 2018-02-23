@@ -22,6 +22,24 @@ class SessionManager
     }
 
     /**
+     * Stop current session.
+     * @return void
+     */
+    public function stop()
+    {
+        $this->session->stop();
+    }
+
+    /**
+     * Start session.
+     * @return void
+     */
+    public function start()
+    {
+        $this->session->start();
+    }
+
+    /**
      * Get value of $key
      * @param string $key
      * @return string|array|int|boolean|null
