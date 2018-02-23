@@ -63,7 +63,9 @@ class PHP_SESSION_MANAGER implements SessionInterface {
      */
     public function set($key, $value)
     {
-        // TODO: Implement set() method.
+        if (!empty($this->id())) {
+            $_SESSION[$key] = $value;
+        }
     }
 
     /**
