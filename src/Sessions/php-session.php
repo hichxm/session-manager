@@ -52,7 +52,9 @@ class PHP_SESSION_MANAGER implements SessionInterface {
      */
     public function get($key)
     {
-        // TODO: Implement get() method.
+        if (!empty($this->id())) {
+            return $_SESSION[$key];
+        }
     }
 
     /**
