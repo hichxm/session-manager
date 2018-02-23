@@ -6,6 +6,11 @@
 interface SessionInterface {
 
     /**
+     * SessionInterface constructor.
+     */
+    public function __construct();
+
+    /**
      * Get value of $key
      * @param string $key
      * @return string|array|int|boolean|null

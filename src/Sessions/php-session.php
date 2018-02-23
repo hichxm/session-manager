@@ -1,24 +1,18 @@
 <?php
 
-
-namespace Hichxm\SessionManager;
+namespace Hichxm\SessionManager\Session;
 use SessionInterface;
 
-
 /**
- * Class Session
- * @package Hichxm
+ * Class PHP_SESSION_MANAGER
  */
-class SessionManager
-{
-    private $session;
+class PHP_SESSION_MANAGER implements SessionInterface {
 
     /**
-     * SessionManager constructor.
-     * @param SessionInterface $session
+     * SessionInterface constructor.
      */
-    public function __construct(SessionInterface $session){
-        $this->session = $session;
+    public function __construct()
+    {
     }
 
     /**
@@ -28,7 +22,7 @@ class SessionManager
      */
     public function get($key)
     {
-        return $this->session->get($key);
+        // TODO: Implement get() method.
     }
 
     /**
@@ -39,7 +33,7 @@ class SessionManager
      */
     public function set($key, $value)
     {
-        $this->session->set($key, $value);
+        // TODO: Implement set() method.
     }
 
     /**
@@ -49,6 +43,6 @@ class SessionManager
      */
     public function unset($key)
     {
-        $this->session->unset($key);
+        // TODO: Implement unset() method.
     }
 }
