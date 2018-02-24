@@ -11,14 +11,14 @@ use SessionInterface;
  */
 class SessionManager
 {
-    public $session;
+    public $bridge;
 
     /**
      * SessionManager constructor.
      * @param SessionInterface $SessionInterface
      */
     public function __construct(SessionInterface $SessionInterface){
-        $this->session = $SessionInterface;
+        $this->bridge = $SessionInterface;
     }
 
     /**
@@ -27,7 +27,7 @@ class SessionManager
      */
     public function stop()
     {
-        $this->session->stop();
+        $this->bridge->stop();
     }
 
     /**
@@ -36,7 +36,7 @@ class SessionManager
      */
     public function start()
     {
-        $this->session->start();
+        $this->bridge->start();
     }
 
     /**
@@ -46,7 +46,7 @@ class SessionManager
      */
     public function get($key)
     {
-        return $this->session->get($key);
+        return $this->bridge->get($key);
     }
 
     /**
@@ -57,7 +57,7 @@ class SessionManager
      */
     public function set($key, $value)
     {
-        $this->session->set($key, $value);
+        $this->bridge->set($key, $value);
     }
 
     /**
@@ -67,6 +67,6 @@ class SessionManager
      */
     public function unset($key)
     {
-        $this->session->unset($key);
+        $this->bridge->unset($key);
     }
 }

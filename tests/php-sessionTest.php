@@ -20,7 +20,7 @@ class phpSessionTest extends \PHPUnit\Framework\TestCase {
          */
         $session = new SessionManager($session_method);
         $session->start();
-        $this->assertEquals($session->session->id(), session_id());
+        $this->assertEquals($session->bridge->id(), session_id());
         $session->stop();
 
         /*
@@ -28,7 +28,7 @@ class phpSessionTest extends \PHPUnit\Framework\TestCase {
          */
         $session = new SessionManager($session_method);
         $session->start();
-        $this->assertEquals($session->session->id(), session_id());
+        $this->assertEquals($session->bridge->id(), session_id());
         $session->stop();
 
         $this->assertTrue(true);
