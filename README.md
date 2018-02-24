@@ -24,7 +24,7 @@ $session['id'];
 
 //Unset data.
 $session->unset($key = "id");
-unset($session['id'])
+unset($session['id']);
 
 //Stop session.
 $session->stop();
