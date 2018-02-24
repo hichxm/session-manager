@@ -54,9 +54,11 @@ class PHP_SESSION_MANAGER implements SessionInterface {
      */
     public function get($key)
     {
-        if (!empty($this->id())) {
+        if (isset($_SESSION[$key])){
             return $_SESSION[$key];
         }
+
+        return null;
     }
 
     /**
@@ -83,4 +85,5 @@ class PHP_SESSION_MANAGER implements SessionInterface {
             unset($_SESSION[$key]);
         }
     }
+
 }
