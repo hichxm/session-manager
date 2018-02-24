@@ -14,14 +14,17 @@ $session = new SessionManager($session_method);
 //Start session.
 $session->start();
 
-//Set data.
+//Set data or different method to set data.
 $session->set($key = "id", $value = "1545348");
+$session['id'] = 1545348;
 
-//Get data.
+//Get data or different method to get data.
 $session->get($key = "id");
+$session['id'];
 
 //Unset data.
 $session->unset($key = "id");
+unset($session['id'])
 
 //Stop session.
 $session->stop();
