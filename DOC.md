@@ -48,7 +48,7 @@
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct()</strong> : <em>void</em><br /><em>SessionInterface constructor.</em> |
+| public | <strong>__construct(</strong><em>array</em> <strong>$options=array()</strong>)</strong> : <em>void</em><br /><em>SessionInterface constructor.</em> |
 | public | <strong>get(</strong><em>string</em> <strong>$key</strong>)</strong> : <em>string/array/int/boolean/null</em><br /><em>Get value of $key</em> |
 | public | <strong>id()</strong> : <em>string</em><br /><em>Return current session id.</em> |
 | public | <strong>set(</strong><em>string</em> <strong>$key</strong>, <em>string/array/int/boolean</em> <strong>$value</strong>)</strong> : <em>void</em><br /><em>Set value of $key</em> |

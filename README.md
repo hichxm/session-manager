@@ -8,7 +8,11 @@
 use Hichxm\SessionManager\Session\PHP_SESSION_MANAGER;
 use Hichxm\SessionManager\SessionManager;
 
-$session_method = new PHP_SESSION_MANAGER();
+$session_method = new PHP_SESSION_MANAGER($options = [
+    "name" => "MySuperSessionName", //Cookie name
+    "lifetime" => 10, //In second, not millisecond.
+    "secure" => true //The cookie sent just if is SSL.
+]);
 $session = new SessionManager($session_method);
 
 //Start session.
