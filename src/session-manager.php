@@ -2,6 +2,7 @@
 
 
 namespace Hichxm\SessionManager;
+
 use ArrayAccess;
 use SessionInterface;
 
