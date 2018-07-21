@@ -1,9 +1,15 @@
 language: php
 
 php:
-  - '7.2'
+  - '7.2.0'
+  - '7.2.5'
+  - '7.2.8'
 
 sudo: false
 
+before_script:
+  - composer self-update
+  - composer install
+
 script:
-  - php $COMPOSER_BIN_DIR/phpunit --verbose
+  - phpunit --verbose
