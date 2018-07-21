@@ -6,4 +6,4 @@ php:
 sudo: false
 
 script:
-  - php $COMPOSER_BIN_DIR/phpunit --verbose
+  - phpunit --verbose
