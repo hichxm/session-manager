@@ -152,4 +152,11 @@ class phpSessionTest extends \PHPUnit\Framework\TestCase {
         $this->assertEquals(500, session_get_cookie_params()['lifetime']);
         $session2->stop();
     }
+
+    /** @test */
+    public function stupid_test()
+    {
+        $this->assertTrue(true);
+    }
+
 }
