@@ -5,5 +5,10 @@ php:
 
 sudo: false
 
+before_script:
+  - composer self-update
+  - composer install
+
+
 script:
   - phpunit --verbose
